@@ -1,5 +1,3 @@
-# Название сценария
+# Поставка данных из очереди Yandex Managed Service for Apache Kafka® в Yandex Managed Service for MongoDB с помощью Yandex Data Transfer
 
-Описание сценария и инструкция по его применению.
-
-Для практических руководств обязательна ссылка на документацию.
+С помощью сервиса [Data Transfer](https://cloud.yandex.ru/docs/data-transfer) вы можете поставлять данные из кластера [Managed Service for Apache Kafka®](https://cloud.yandex.ru/docs/managed-kafka) в кластер [Managed Service for MongoDB](https://cloud.yandex.ru/docs/managed-mongodb) в реальном времени. Настройка через Terraform описана в [практическом руководстве](https://cloud.yandex.ru/docs/data-transfer/tutorials/mkf-to-mmg), необходимый для настройки конфигурационный файл [data-transfer-mkf-mmg.tf](data-transfer-mkf-mmg.tf) расположен в этом репозитории.
