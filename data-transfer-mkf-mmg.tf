@@ -1,33 +1,34 @@
 # Infrastructure for the Yandex Cloud Managed Service for Apache Kafka®, Managed Service for MongoDB, and Data Transfer
 #
-# RU: https://cloud.yandex.ru/docs/data-transfer/tutorials/data-transfer-mkf-mmg
-# EN: https://cloud.yandex.com/en/docs/data-transfer/tutorials/data-transfer-mkf-mmg
+# RU: https://yandex.cloud/ru/docs/data-transfer/tutorials/mkf-to-mmg
+# EN: https://yandex.cloud/en/docs/data-transfer/tutorials/mkf-to-mmg
+
 #
 # Specify the following settings:
 locals {
   # Source Managed Service for Apache Kafka® cluster settings:
-  source_kf_version    = "" # Set a desired version of Apache Kafka®. For available versions, see the documentation main page: https://cloud.yandex.com/en/docs/managed-kafka/.
-  source_user_password = "" # Set a password for the Apache Kafka® user
+  source_kf_version    = "" # Desired version of Apache Kafka®. For available versions, see the documentation main page: https://yandex.cloud/en/docs/managed-kafka/.
+  source_user_password = "" # Apache Kafka® user's password
 
   # Target Managed Service for MongoDB cluster settings:
-  target_mg_version    = "" # Set a desired version of MongoDB. For available versions, see the documentation main page: https://cloud.yandex.com/en/docs/managed-mongodb/.
-  target_user_password = "" # Set a password for the MongoDB user
+  target_mg_version    = "" # Desired version of MongoDB. For available versions, see the documentation main page: https://yandex.cloud/en/docs/managed-mongodb/.
+  target_user_password = "" # MongoDB user's password
 
   # Specify these settings ONLY AFTER the clusters are created. Then run "terraform apply" command again.
   # You should set up endpoints using the GUI to obtain their IDs
-  source_endpoint_id = "" # Set the source endpoint ID
-  target_endpoint_id = "" # Set the target endpoint ID
+  source_endpoint_id = "" # Source endpoint ID
+  target_endpoint_id = "" # Target endpoint ID
   transfer_enabled   = 0  # Set to 1 to enable Transfer
 
   # The following settings are predefined. Change them only if necessary.
   network_name    = "network"          # Name of the network
   subnet_name     = "subnet-a"         # Name of the subnet
   kf_cluster_name = "kafka-cluster"    # Name of the Apache Kafka® cluster
-  kf_username     = "mkf-user"         # Name of the Apache Kafka® username
+  kf_username     = "mkf-user"         # Username of the Apache Kafka® cluster
   kf_topic        = "sensors"          # Name of the Apache Kafka® topic
   mg_cluster_name = "mongodb-cluster"  # Name of the MongoDB cluster
   mg_db_name      = "db1"              # Name of the MongoDB cluster database
-  mg_username     = "mmg-user"         # Name of the MongoDB cluster username
+  mg_username     = "mmg-user"         # Username of the MongoDB cluster
   transfer_name   = "mkf-mmg-transfer" # Name of the transfer from the Managed Service for Apache Kafka® to the Managed Service for MongoDB
 }
 
