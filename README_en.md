@@ -1,0 +1,3 @@
+# Delivering data from a Yandex Managed Service for Apache Kafka® queue to Yandex Managed Service for MongoDB through Yandex Data Transfer
+
+With [Data Transfer](https://yandex.cloud/en/docs/data-transfer), you can deliver data from a [Managed Service for Apache Kafka®](https://yandex.cloud/en/docs/managed-kafka) cluster to a [Managed Service for MongoDB](https://yandex.cloud/en/docs/managed-mongodb) one in real time. See [this tutorial](https://yandex.cloud/en/docs/data-transfer/tutorials/mkf-to-mmg) to learn how to set up the solution with Terraform. This repository contains the configuration file you will need: [data-transfer-mkf-mmg.tf](data-transfer-mkf-mmg.tf).
